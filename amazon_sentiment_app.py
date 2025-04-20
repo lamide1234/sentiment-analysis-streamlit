@@ -3,9 +3,8 @@ import pickle
 
 import os
 
-BASE_DIR = os.path.dirname(__file__)  # Gets the current file's directory
-model_path = os.path.join(BASE_DIR, 'sentiment_model.pkl')
-vectorizer_path = os.path.join(BASE_DIR, 'tfidf_vectorizer.pkl')
+model_path = sentiment_model.pkl
+vectorizer_path = tfidf_vectorizer.pkl'
 
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
