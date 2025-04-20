@@ -1,12 +1,18 @@
 import streamlit as st
 import pickle
 
-# Load model and vectorizer
-with open('./sentiment_model.pkl', 'rb') as f:
+import os
+
+BASE_DIR = os.path.dirname(__file__)  # Gets the current file's directory
+model_path = os.path.join(BASE_DIR, 'sentiment_model.pkl')
+vectorizer_path = os.path.join(BASE_DIR, 'tfidf_vectorizer.pkl')
+
+with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
-with open('./tfidf_vectorizer.pkl', 'rb') as f:
+with open(vectorizer_path, 'rb') as f:
     vectorizer = pickle.load(f)
+
 from sklearn.utils.validation import check_is_fitted
 check_is_fitted(vectorizer)
 
