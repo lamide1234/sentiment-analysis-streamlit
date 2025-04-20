@@ -3,8 +3,8 @@ import pickle
 
 import os
 
-model_path = sentiment_model.pkl
-vectorizer_path = tfidf_vectorizer.pkl'
+model_path = 'sentiment_model.pkl'
+vectorizer_path = 'tfidf_vectorizer.pkl'
 
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
