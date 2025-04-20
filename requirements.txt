@@ -10,7 +10,5 @@ plotly==5.1.0
 # Upgrade pip
 pip>=23.1
 
-# Core packages
-streamlit
 pandas>=2.1
 numpy>=1.26
