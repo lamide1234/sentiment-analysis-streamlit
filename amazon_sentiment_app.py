@@ -2,11 +2,13 @@ import streamlit as st
 import pickle
 
 # Load model and vectorizer
-with open('./sentiment_model.pkl', 'rb') as f:
+with open('sentiment-analysis-streamlit/sentiment_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-with open('./tfidf_vectorizer.pkl', 'rb') as f:
+with open('sentiment-analysis-streamlit/tfidf_vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
+from sklearn.utils.validation import check_is_fitted
+check_is_fitted(vectorizer)
 
 # App layout
 st.title("Amazon Review Sentiment Analyzer 🛍️✨")
