@@ -3,7 +3,7 @@ import pickle
 
 import os
 
-model_path = 'sentiment_model.pkl'
+model_path = 'logistic_regression_model.pkl'
 vectorizer_path = 'tfidf_vectorizer.pkl'
 
 with open(model_path, 'rb') as f:
