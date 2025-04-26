@@ -40,8 +40,10 @@ if st.button("Analyze Sentiment"):
         proba = model.predict_proba(vec)[0]
         positive_proba = proba[1]
 
-        if positive_proba >= 0.4:
+        if positive_proba >= 0.5:
             st.success("Predicted Sentiment: **Positive Review** 😀")
+        elif positive_proba >= 0.4 and positive_proba < 0.5:
+            st.success("Predicted Sentiment: **Neutral Review** 😐")
         else:
             st.success("Predicted Sentiment: **Negative Review** 😞")
 
